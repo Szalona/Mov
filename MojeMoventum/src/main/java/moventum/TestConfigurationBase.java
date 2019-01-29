@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.LoginPage;
 
 public abstract class TestConfigurationBase {
-    public String userName = "delta.afs.demo";
-    public String password = "movweb2014";
-    public String url = "http://172.17.15.20:8082/dev/en-US/Home";
+    public String userName = "";
+    public String password = "";
+    public String url = "";
 
     public WebDriver driver;
     public WebDriverWait wait;
@@ -57,7 +57,7 @@ public abstract class TestConfigurationBase {
         if (driver == null) {
             System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
             driver = new ChromeDriver();
-            driver.get("http://172.17.15.20:8082/dev/en-US");
+            driver.get("");
             driver.manage().window().maximize();
         }
     }
